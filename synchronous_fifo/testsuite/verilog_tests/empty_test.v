@@ -1,4 +1,5 @@
-`include "../src/simple_linear_fifo_params.vh"
+//`include "../src/simple_linear_fifo_params.vh"
+`include "../src/circular_fifo_params.vh"
 module empty_test;
     reg                       wr_en, rd_en, frstn;
     reg                       clk = 0;
@@ -6,7 +7,18 @@ module empty_test;
     wire [`DATA_WIDTH - 1 : 0] data_out;
     wire                      empty, full;
 
-    simple_linear_fifo slf(
+    //simple_linear_fifo slf(
+    //    .FCLK(clk),
+    //    .FRSTN(frstn),
+    //    .WR_EN(wr_en),
+    //    .RD_EN(rd_en),
+    //    .DATA_IN(data_in),
+    //    .DATA_OUT(data_out),
+    //    .EMPTY(empty),
+    //    .FULL(full)
+    //);
+
+    circular_fifo cf(
         .FCLK(clk),
         .FRSTN(frstn),
         .WR_EN(wr_en),
