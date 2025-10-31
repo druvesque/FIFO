@@ -13,8 +13,8 @@ module circular_fifo(
 
     // INTERNAL VARIABLES
     reg [`DATA_WIDTH - 1 : 0] memory [`MEM_WIDTH - 1 : 0];
-    reg [`PTR_WIDTH - 1 : 0] wr_ptr, rd_ptr;
-    reg [`PTR_WIDTH - 1 : 0] wr_cnt; // KEEPS TRACK OF NUMBER OF FULL BLOCKS OF MEMORY
+    reg [`PTR_WIDTH : 0] wr_ptr, rd_ptr;
+    reg [`PTR_WIDTH : 0] wr_cnt; // KEEPS TRACK OF NUMBER OF FULL BLOCKS OF MEMORY
 
     // RESET BEHAVIOUR
     integer i;

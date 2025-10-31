@@ -12,7 +12,7 @@ module simple_linear_fifo(
 
     // INTERNAL VARIABLES
     reg [`DATA_WIDTH - 1 : 0] memory [`MEM_WIDTH - 1 : 0];
-    reg [`PTR_WIDTH - 1 : 0] wr_ptr, rd_ptr;
+    reg [`PTR_WIDTH : 0] wr_ptr, rd_ptr;
     
     // RESET BEHAVIOUR
     integer i;
