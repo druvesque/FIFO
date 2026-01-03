@@ -20,7 +20,6 @@ module simple_linear_asynchronous_fifo (
     // MEMORY 
     reg [`DATA_WIDTH - 1 : 0] memory ['MEM_WIDTH - 1 : 0];
 
-
     // EMPTY-FULL GENERATION VARIABLES
     reg [`PTR_WIDTH : 0] b_wr_ptr, b_rd_ptr;
 
